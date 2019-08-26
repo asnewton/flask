@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Hey there !</p>
+    <h1>Welcome to the
+        <div class="page-header">
+            <h1>FoodPanda <small>DilSeFoodie</small></h1>
+        </div>
+    </h1>
+    <h2>{{name | capitalize}}</h2>
+    <h3>{{letter}}</h3>
+    <a href="{{ url_for('demo_page') }}">Demo page</a>
+    <ul>
+
+        {% for item in letter %}
+        <li>{{item}}</li>
+        {% endfor %}
+    </ul>
+    <div>
+        {% if 'A' in letter %}
+        <p>A found</p>
+        {% else %}
+        <p>A not found</p>
+        {% endif %}
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="navbar-nav">
+        <a class="navbar-item nav-link" href="{{url_for('index')}}">Home</a>
+        <a class="navbar-item nav-link" href="{{url_for('add_pup')}}">Add Pup</a>
+        <a class="navbar-item nav-link" href="{{url_for('list_pup')}}">List of Pups</a>
+        <a class="navbar-item nav-link" href="{{url_for('del_pup')}}">Delete Pup</a>
+        <a class="navbar-item nav-link" href="{{url_for('add_owner')}}">Add Owner</a>
+      </div>
+    </nav>
+    {% block content %}
+
+    {% endblock %}
+  </body>
+</html>
